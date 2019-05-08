@@ -173,8 +173,8 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
         setupHeader();
         updateAcceptButton();
         progress = new ProgressDialog(this);
-        progress.setTitle("Processing Images");
-        progress.setMessage("This may take a few moments");
+        progress.setTitle("正在处理图片");
+        progress.setMessage("请稍后...");
     }
     
     @Override
@@ -190,7 +190,7 @@ public class MultiImageChooserActivity extends Activity implements OnItemClickLi
             isChecked = false;
             AlertDialog.Builder builder = new AlertDialog.Builder(this);
             builder.setTitle("选择照片");
-            builder.setMessage("一次最多只能选择 " + maxImageCount + " 张照片");
+            builder.setMessage("最多只能选择 " + maxImageCount + " 张照片");
             builder.setPositiveButton("确定", new DialogInterface.OnClickListener() {
                 public void onClick(DialogInterface dialog, int which) { 
                     dialog.cancel();
